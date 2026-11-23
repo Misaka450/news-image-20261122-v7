@@ -15,11 +15,11 @@ names what was left out and why.
 ## Run
 
 ```bash
-python3 build.py     # writes entry.png and preview-300.png (1024x1024, <=1 MiB)
-python3 main.py      # copies entry.png to $MAKEFUN_OUTPUT_DIR/entry.png
+python3 main.py      # validates entry.png (1024x1024, <= 1 MiB) and copies it to $MAKEFUN_OUTPUT_DIR
 ```
 
-No network, no image models: everything is drawn with Pillow.
+The page was drawn by a Pillow program; the rendered PNG is committed here and the
+entrypoint re-checks its dimensions and size before copying it. No network, no image models.
 
 ## License
 
